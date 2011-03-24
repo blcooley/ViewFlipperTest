@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ViewFlipper 
+		android:id="@+id/vflipper"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_above="@+id/buttonleft"
+	    >
+	    <WebView
+	    	android:id="@+id/web1"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent" />
+	    <WebView
+	    	android:id="@+id/web2"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent" />
+	    <WebView
+	    	android:id="@+id/web3"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent" />	    	
+	</ViewFlipper>
+	<Button  
+		android:id="@id/buttonleft"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentBottom="true"
+	    android:text="Previous"
+	    android:onClick="moveLeft"
+	    />
+	<Button  
+		android:id="@+id/buttonmid"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:text="Toggle Size"
+	    android:onClick="toggleSize"
+	    />
+	<Button  
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:text="Next"
+	    android:onClick="moveRight"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+	    />
+</RelativeLayout>
